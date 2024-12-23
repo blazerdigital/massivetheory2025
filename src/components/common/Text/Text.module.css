@@ -1,0 +1,84 @@
+.text {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5em;
+  font-family: "Work Sans", sans-serif;
+  color:#FFF8E7;
+}
+
+.primaryDefault {
+  color: var(--Primary-Default);
+}
+.highlight {
+  color: var(--Yellow);
+}
+.base0 {
+  color:#FFF8E7;
+  font-size: 1.1em;
+}
+.base500 {
+  color: var(--Base-500);
+}
+.base400 {
+  color: var(--Base-400);
+}
+.base600 {
+  color: var(--Base-600);
+}
+.base800 {
+  color: var(--Base-800);
+}
+.base950 {
+  color: var(--Base-950);
+}
+.sm {
+}
+.base {
+  font-size: 1em;
+}
+.lg {
+}
+.xl {
+}
+.xl2 {
+}
+.xl3 {
+}
+.xl15{
+  font-size: 1.5em;
+  font-family: 'amsipro';
+}
+.textCenter {
+  text-align: center;
+}
+.bold {
+  font-weight: 700;
+}
+@media only screen and (max-width: 1199px) {
+  .xl2 {
+    font-size: 20px;
+  }
+  .xl3 {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .lg {
+    font-size: 1.5em;
+  }
+
+  .xl {
+    font-size: 18px;
+  }
+  .xl2 {
+    font-size: 20px;
+  }
+  .xl3 {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .xl2 {
+    font-size: 16px;
+  }
+}

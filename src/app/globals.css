@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@font-face {
+  font-family: 'AmsiPro-Ultra';
+  src: url('/fonts/AmsiPro-Ultra.woff') format('woff'),
+       url('/fonts/AmsiPro-Ultra.woff2') format('woff2');
+       font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --Base-0: #fff;
+  --Base-200: #dadadb;
+  --Base-400: #9d9d9f;
+  --Base-500: #78787c;
+  --Base-600: #5f5f63;
+  --Base-800: #222227;
+  --Base-900: #15151c;
+  --Base-950: #09090f;
+  --Primary-Default: #5946b2;
+  --Yellow: #ffd700;
+  --link: #a0a0a0;
+  --Base-50: #f6f7f9;
+}
+
+body {
+  padding: 0;
+  height: 100%;
+  overflow: auto; /* Ensure both horizontal and vertical scrolling */
+  scroll-behavior: smooth !important;
+  background: linear-gradient(180deg, #28313b 0.03%, #3f3a5d 101.47%);
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1; /* This will take up the remaining space */
+}
+#my-store-66578708 {
+  margin-top: 220px; /* Adjust as necessary to ensure it's not hidden behind the navbar */
+  padding: 200px; /* Add some padding around the store content */
+  z-index: 1;
+  position: relative;
+}
+
+@media only screen and (max-width: 991px) {
+}
+
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: 'AmsiPro-Ultra', sans-serif;
+}
+p{
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button, a {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover, a:hover {
+  opacity: 0.8;
+  transform: translateY(-3px);
+}
+
+.container {
+  max-width: 1199px;
+  margin: 0 auto;
+  width: 90%;
+}
+.anchor {
+  display: block;
+  height: 80px; /* Adjust the height to match your padding/margin needs */
+  margin-top: -80px; /* Negative margin to offset the height */
+  visibility: hidden; /* Hide the div */
+}
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in;
+}
+/* src/app/globals.css */
+body-merch-page {
+  background:#fff !important;
+}
+.footer-wrapper {
+  background: url(/images/footerBg.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 30px 0 !important;
+  min-height: 140px;
+  position: relative;
+  opacity: 0;
+  animation: fadeIn 0.2s forwards 1s;
+}
+

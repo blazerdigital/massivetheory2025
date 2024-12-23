@@ -1,0 +1,141 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 20px;
+  margin-top: 100px;
+}
+.container {
+  position: relative;
+  min-height: 370px;
+  max-height: 370px;
+}
+.heading {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  z-index: 1;
+  padding-left:5%;
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
+.subscriberContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.donationInfoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.donationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.donationBox {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.subscribeForm {
+  border-radius: 35px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.button {
+  font-size: 16px;
+  background: var(--Primary-Default);
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: var(--Base-0);
+  text-align: center;
+  min-width: 169px;
+}
+
+.img {
+  width: 100%;
+  display: block;
+  max-width: 546px;
+}
+
+.list {
+  color: var(--Base-0);
+}
+
+.helpsLists {
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .subscriberContainer,
+  .donationContainer {
+    gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .donationInfoContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .subscribeForm {
+    max-width: 550px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .donationBox {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .container {
+    min-height: 280px;
+    max-height: 280px;
+  }
+
+  .subscribeForm {
+    padding: 0px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .subscribeForm {
+    padding: 20px;
+  }
+}

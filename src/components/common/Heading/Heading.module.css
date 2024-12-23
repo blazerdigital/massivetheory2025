@@ -1,0 +1,100 @@
+.heading {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128.571%;
+}
+.highlight {
+  color: var(--Yellow);
+}
+.base0 {
+  color: var(--Base-0);
+}
+.base950 {
+  color: var(--Base-950);
+}
+.xl2 {
+  font-size: 24px;
+}
+.xl3 {
+  font-size: 30px;
+}
+.xl4 {
+  font-size: 36px;
+}
+.xl5 {
+  font-size: 40px;
+}
+.xl6 {
+  font-size: 60px;
+}
+.xl7 {
+  font-size: 72px;
+}
+.textCenter {
+  text-align: center;
+}
+.semiBold {
+  font-weight: 600;
+}
+.light {
+  font-weight: 300;
+}
+@media only screen and (max-width: 1199px) {
+  .xl2 {
+    font-size: 22px;
+  }
+  .xl3 {
+    font-size: 26px;
+  }
+  .xl4 {
+    font-size: 32px;
+  }
+  .xl6 {
+    font-size: 50px;
+  }
+  .xl5 {
+    font-size: 36px;
+  }
+  .xl7 {
+    font-size: 60px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .xl2 {
+    font-size: 20px;
+  }
+  .xl4 {
+    font-size: 30px;
+  }
+  .xl5 {
+    font-size: 30px;
+  }
+  .xl6 {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .xl7 {
+    font-size: 50px;
+  }
+  .xl4 {
+    font-size: 28px;
+  }
+  .xl3 {
+    font-size: 24px;
+  }
+  .xl6 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .xl4 {
+    font-size: 24px;
+  }
+  .xl5 {
+    font-size: 24px;
+  }
+  .xl7 {
+    font-size: 36px;
+  }
+}

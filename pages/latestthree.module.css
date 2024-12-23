@@ -1,0 +1,84 @@
+/* latesthree.module.css */
+.container {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.Wrapper {}
+.heading {
+  font-size: 2em;
+  color: #ffd700;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.EpisodesWrapper {
+  max-width: 1199px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title {
+  color: #ffd700;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.episodesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px 25px;
+}
+
+.episodeCard {
+  transition: transform 0.2s ease-in-out; /* Add smooth animation */
+}
+
+.episodeCard:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnail {
+  object-fit: cover;
+  border-radius: 8px;
+  max-width: 100%; /* Ensure it adapts on smaller screens */
+}
+
+.episodeTitle {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1.3em;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  color: #ffd700;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 991px) {
+  .episodesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 16px;
+  }
+  .container {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .episodesGrid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .episodeCard {
+    gap: 12px;
+  }
+}

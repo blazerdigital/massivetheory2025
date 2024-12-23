@@ -1,0 +1,62 @@
+.wrapper {
+  background-size: cover;
+  background-position: top center;
+  margin-top: 100px;
+}
+.container {
+  padding-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  padding-bottom: 10px;
+  font-family: 'AmsiPro-Ultra', sans-serif;
+  font-weight: 800;
+  font-size: 2.70em;
+  line-height: 1em;
+  letter-spacing: -0.2px;
+  color:#FFF8E7;
+}
+.infoContainer {
+  max-width: 647px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-left:5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.logo {
+  max-width: 44px;
+  width: 100%;
+}
+@media only screen and (max-width: 520px) {
+  .logo {
+    max-width: 40px;
+  }
+  .wrapper {
+    position: relative;
+    z-index: 1;
+  }
+.heading {
+  font-size: 2em;
+}
+.wrapper {
+  padding-top: 10px;
+}
+.infoContainer {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 30%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+}

@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 0px 0;
+  width: 100%;
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    padding: 0px 0;
+  }
+}

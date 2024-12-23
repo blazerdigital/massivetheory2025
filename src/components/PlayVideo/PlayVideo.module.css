@@ -1,0 +1,26 @@
+.videoWrapper {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+.reactPlayer iframe {
+  border-radius: 8px;
+}
+
+.reactPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+}
+.reactPlayer video {
+  display: block;
+}
+@media only screen and (max-width: 991px) {
+  .videoWrapper {
+    margin-left: -5%;
+    margin-right: -5%;
+    width: 110%;
+  }
+}

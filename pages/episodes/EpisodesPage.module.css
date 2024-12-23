@@ -1,0 +1,95 @@
+.container {
+  margin: 0 auto;
+}
+.Wrapper {
+}
+.EpisodesWrapper{
+   padding-top: 70px;
+   max-width: 1199px;
+   width: 100%;
+   margin: 0 auto;
+}
+.loadingWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #28313b 0.03%, #3f3a5d 101.47%);
+}
+
+.loadingText {
+  font-size: 1em;
+  color: #3d4a5a;
+  animation: loadingAnimation 1s infinite ease-in-out;
+}
+
+.title {
+  color: #ffd700;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.episodesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px 25px;
+}
+
+.episodeCard {
+  transition: transform 0.2s ease-in-out; /* Add smooth animation */
+}
+
+.episodeCard:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnail {
+  width: 100%; /* Make thumbnails responsive */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Prevent distortion */
+  border-radius: 8px;
+}
+
+.episodeTitle {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  font-size: 1em;
+  line-height: 1.3em;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  color:#ffd700;
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 991px) {
+  .episodesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 16px;
+  }
+  .EpisodesWrapper{
+    padding-top: 100px;
+    max-width: 1199px;
+    width: 100%;
+    margin: 0 auto;
+ }
+}
+
+@media only screen and (max-width: 640px) {
+  .episodesGrid {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .episodeCard {
+    gap: 12px;
+  }
+  .thumbnail {
+    max-width: 100%; /* Ensure it adapts on smaller screens */
+  }
+}

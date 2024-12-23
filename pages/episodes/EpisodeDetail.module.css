@@ -1,0 +1,121 @@
+.container {
+  padding-top:90px;
+  max-width: 1199px;
+  width: 80%;
+  margin: 0 auto;
+  }
+  
+  .heading {
+    color: #ffd700;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .publishDate {
+    color: #ddd6c6;
+    font-weight: 400;
+    line-height: 1.4em;
+    font-family: "Work Sans", sans-serif;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .button {
+    font-size: 16px;
+    background: var(--Primary-Default);
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: var(--Base-0);
+    text-align: center;
+    min-width: 169px;
+    max-width: max-content;
+    display: block;
+    margin: 30px 0;
+  }
+  .transcript {
+    margin-top: 50px;
+    font-size: 1em;
+    color: #ddd6c6;
+    font-weight: 400;
+    line-height: 1.6em;
+    font-family: "Work Sans", sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
+  }
+
+.transcript p {
+    margin-bottom: 1rem;
+}
+  
+  .citations {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .citations h2{
+    color: #ffd700;
+    font-size: 1.5em;
+    text-align: left;
+  }
+  
+  .linkContainer {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .link {
+    color: var(--link);
+    font-size: 14px;
+    font-family: "Work Sans", sans-serif;
+    word-break: break-word;
+  }
+  
+  .button {
+    font-size: 16px;
+    background: var(--Primary-Default);
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: var(--Base-0);
+    text-align: center;
+    min-width: 169px;
+    max-width: max-content;
+    display: block;
+  }
+  .videoEmbed {
+    width: 100%; /* Full width of the parent container */
+    height: 0;
+    padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio */
+    position: relative;
+}
+
+.videoEmbed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make iframe occupy full width */
+    height: 100%; /* Match parent's aspect ratio */
+    border: none; /* Remove borders */
+}
+
+
+  @media only screen and (max-width: 991px) {
+    .container {
+      gap: 24px;
+    }
+    .transcript {
+      margin: 12px 0;
+    }
+    .citations {
+      margin-top: 20px;
+    }
+  }
+  

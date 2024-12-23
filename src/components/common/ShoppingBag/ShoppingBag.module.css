@@ -1,0 +1,12 @@
+/* Ensure the widget container does not affect the layout negatively */
+/* ShoppingBag.module.css */
+.shoppingBagContainer {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Custom styles for your Ecwid elements */
+  .ec-cart-widget .ecwid-svg-icon {
+    fill: #ff0000!important; /* Example color */
+  }
+  

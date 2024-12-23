@@ -1,0 +1,51 @@
+.button {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 133.333%;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+  background: transparent;
+  box-shadow: 4px 4px 0px 0px rgba(9, 9, 15, 0.2);
+  white-space: nowrap;
+}
+.noShadow {
+  box-shadow: none;
+}
+.transparentBase0 {
+  border: 1px solid var(--Base-0);
+  color: var(--Base-0);
+}
+.transparentBase950 {
+  border-radius: 10px;
+  border: 1px solid var(--Base-950);
+  color: var(--Base-950);
+}
+.primaryDefault {
+  background: var(--Primary-Default);
+  color: var(--Base-0);
+  border: 1px solid var(--Primary-Default);
+}
+.base0 {
+  background: var(--Base-0);
+  color: var(--Primary-Default);
+  border: 1px solid var(--Base-950, #09090f);
+}
+.wFull {
+  width: 100%;
+}
+
+@media only screen and (max-width: 520px) {
+  .button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}

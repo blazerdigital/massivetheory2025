@@ -1,0 +1,39 @@
+.wrapper {
+  margin-top: 40px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.heading{
+  font-family: 'AmsiPro-Ultra', sans-serif;
+  font-size: 2em;
+  color:#ffd700;
+}
+/* Responsive iframe container with 80% width */
+.videoContainer {
+  position: relative;
+  width: 100%; /* 80% of the parent container's width */
+  padding-bottom: 45%; /* Adjusted for 16:9 aspect ratio (9/16 * 80%) */
+  height: 0; /* Height is calculated by padding-bottom */
+  overflow: hidden;
+  margin: 0 auto; /* Center the container */
+}
+
+.videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the video container */
+  height: 100%; /* Full height of the video container */
+  border: none;
+}
+@media only screen and (max-width: 991px) {
+  .container {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  .heading{
+  }
+}

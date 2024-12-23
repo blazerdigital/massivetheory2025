@@ -1,0 +1,32 @@
+.ec-wrapper{
+    margin-top: 100px;
+}
+.ecwid-productBrowser {
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+body#ecwid_body .ecwid{
+    margin-top: 200px;
+    max-width: 1199px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+content{
+    margin-top: 80px;
+}
+.header-section h1{
+    font-family: 'AmsiPro-Ultra', sans-serif;
+    color: #28313b;
+    padding-left: 50px;
+}
+.badge-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin for spacing above badges */
+    margin-bottom: 20px;
+}
+.badge-container img{
+    width: 250px;
+}
