@@ -42,7 +42,7 @@
 
 .thumbnail {
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 25px;
   max-width: 100%; /* Ensure it adapts on smaller screens */
 }
 
