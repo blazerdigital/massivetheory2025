@@ -28,8 +28,8 @@ const EpisodesPage = ({ episodes }) => {
             <div key={episode.id} className={styles.episodeCard}>
               <Link href={`/episodes/${episode.slug}`}>
               <img
-  src={`${API_URL}${episode.Thumb?.url || episode.Thumb?.formats?.large?.url || episode.Thumb?.formats?.medium?.url || episode.Thumb?.formats?.small?.url}`}
-  alt={episode.Title}
+  src={episode.thumb ? episode.thumb : "/images/fallback-thumbnail.jpg"} // Use fallback if thumb is undefined
+  alt={episode.Title || "Episode Thumbnail"} // Graceful fallback for alt text
   className={styles.thumbnail}
 />
                 <h2 className={styles.episodeTitle}>{episode.Title}</h2>
@@ -44,13 +44,13 @@ const EpisodesPage = ({ episodes }) => {
 export async function getStaticProps() {
   const API_URL = "http://localhost:1337";
 
-  const response = await fetch(`${API_URL}/api/episodes?populate=Thumb&sort[Order]=desc`);
+  const response = await fetch(`${API_URL}/api/episodes?fields=Title,slug,thumb&sort[Order]=desc`);
   const data = await response.json();
 
-  console.log("API Response:", data);
+  console.log("API Response:", JSON.stringify(data, null, 2)); // Log the response to debug
 
   return {
-    props: { episodes: data.data },
+    props: { episodes: data.data || [] },
   };
 }
 

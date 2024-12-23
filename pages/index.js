@@ -3,12 +3,11 @@ import Head from "next/head";
 import Wrapper from "@/components/common/Wrapper/Wrapper";
 import HeroSection from "../src/components/Home/HeroSection/HeroSection";
 import PlayNow from "../src/components/Home/PlayNow/PlayNow";
-import LatestEpisodes from "./latestthree"; // Import your component
+import styles from "./latestthree.module.css"; // Reuse styles from LastThreePage
+import Heading from "@/components/common/Heading/Heading";
+import Link from "next/link";
 
-const API_URL = process.env.STRAPI_API_URL || "http://localhost:1337"; // Ensure API_URL is defined
 const HomePage = ({ latestEpisodes = [] }) => {
-  console.log("Latest Episodes Data:", JSON.stringify(latestEpisodes, null, 2));
-
   return (
     <div>
       <Head>
@@ -22,39 +21,60 @@ const HomePage = ({ latestEpisodes = [] }) => {
       <Wrapper>
         <HeroSection />
         <PlayNow />
-        <LatestEpisodes episodes={latestEpisodes} /> {/* Use the LatestEpisodes component */}
+        {/* Integrate LastThreePage rendering logic */}
+        <div className={styles.container}>
+          <div className={styles.EpisodesWrapper}>
+            <Heading className={styles.heading}>Latest Episodes</Heading>
+            <div className={styles.episodesGrid}>
+              {latestEpisodes.map((episode) => (
+                <div key={episode.id} className={styles.episodeCard}>
+                  <Link href={`/episodes/${episode.slug}`}>
+                    <img
+                      src={episode.thumb ? episode.thumb : "/images/fallback-thumbnail.jpg"}
+                      alt={episode.Title || "Episode Thumbnail"}
+                      className={styles.thumbnail}
+                    />
+                  </Link>
+                  <h3 className={styles.episodeTitle}>
+                    <Link href={`/episodes/${episode.slug}`}>
+                      {episode.Title || "Title Unavailable"}
+                    </Link>
+                  </h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </Wrapper>
     </div>
   );
 };
 
-export default HomePage;
-
 export async function getStaticProps() {
-  const API_URL = process.env.STRAPI_API_URL || "http://localhost:1337";
+  const API_URL = "http://localhost:1337";
 
   try {
-    const response = await fetch(`${API_URL}/api/episodes?populate=Thumb&sort[Order]=desc`);
+    const response = await fetch(
+      `${API_URL}/api/episodes?fields=Title,slug,thumb&sort[Order]=desc&pagination[limit]=3`
+    );
+
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
     const data = await response.json();
-    const latestEpisodes = data?.data.slice(0, 3) || []; // Fetch only the first 3 episodes
-    console.log("Fetched Episodes for Homepage:", JSON.stringify(latestEpisodes, null, 2));
+
+    const latestEpisodes = data.data || []; // Use fallback if no data is returned
 
     return {
-      props: {
-        latestEpisodes,
-      },
+      props: { latestEpisodes },
     };
   } catch (error) {
-    console.error("Error fetching episodes for Homepage:", error);
-
+    console.error("Error fetching latest episodes:", error);
     return {
-      props: {
-        latestEpisodes: [], // Fallback to an empty array
-      },
+      props: { latestEpisodes: [] },
     };
   }
 }
+
+export default HomePage;
