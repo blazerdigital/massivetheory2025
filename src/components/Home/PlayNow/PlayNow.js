@@ -6,7 +6,7 @@ import classes from "./PlayNow.module.css";
 import { Heading, Wrapper } from "@/components/common";
 
 const PlayNow = () => {
-  const hardcodedVideoUrl = "https://www.youtube.com/embed/MqBICFOzrA0"; // Replace with your video URL
+  const hardcodedVideoUrl = "https://www.youtube.com/embed/VaV_Mmov1fk"; // Replace with your video URL
 
   return (
     <Wrapper className={classes.wrapper} id="playingnow">

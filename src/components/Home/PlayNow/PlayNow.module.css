@@ -14,8 +14,8 @@
 /* Responsive iframe container with 80% width */
 .videoContainer {
   position: relative;
-  width: 100%; /* 80% of the parent container's width */
-  padding-bottom: 45%; /* Adjusted for 16:9 aspect ratio (9/16 * 80%) */
+  width: 100%; /* Full width of the parent container */
+  padding-bottom: 56.25%; /* Correct for 16:9 aspect ratio (9/16 * 100%) */
   height: 0; /* Height is calculated by padding-bottom */
   overflow: hidden;
   margin: 0 auto; /* Center the container */
