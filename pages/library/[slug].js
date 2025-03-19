@@ -5,23 +5,27 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:133
 
 // 🔹 Get all book slugs at build time
 export async function getStaticPaths() {
+  console.log("🚀 Fetching book slugs...");
+
   const res = await fetch(`${API_BASE_URL}/api/library-items?fields=slug`);
   const data = await res.json();
 
+  console.log("🔍 API Response:", JSON.stringify(data, null, 2));
+
   if (!data.data || !Array.isArray(data.data)) {
     console.error("❌ API response is invalid");
-    return { paths: [], fallback: false };
+    return { paths: [], fallback: "blocking" };
   }
 
   const paths = data.data
-    .filter((book) => book.attributes && book.attributes.slug)
+    .filter((book) => book.slug)  // ✅ Ensure slug exists
     .map((book) => ({
-      params: { slug: book.attributes.slug },
+      params: { slug: book.slug },
     }));
 
   console.log("✅ Extracted Paths:", paths);
 
-  return { paths, fallback: false };
+  return { paths, fallback: "blocking" };
 }
 
 // 🔹 Fetch book details & related books at build time

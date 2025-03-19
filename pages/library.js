@@ -3,8 +3,10 @@ import Link from "next/link";
 import axios from "axios";
 import "../styles/library.css"; // ✅ Ensure correct path
 
-const LIBRARY_API_URL = "http://10.0.1.48:1337/api/library-items?populate=*&pagination[limit]=100";
-const EPISODES_API_URL = "http://10.0.1.48:1337/api/episodes?fields=order,Title,thumb";
+const API_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:1337";
+const LIBRARY_API_URL = `${API_BASE_URL}/api/library-items?populate=*&pagination[limit]=100`;
+const EPISODES_API_URL = `${API_BASE_URL}/api/episodes?fields=order,Title,thumb`;
+
 
 const EPISODES_PER_PAGE = 2; // ✅ Show 2 episodes per page
 
