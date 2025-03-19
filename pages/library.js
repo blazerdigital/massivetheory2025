@@ -5,7 +5,7 @@ const API_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_URL || "http://localhost:133
 const LIBRARY_API_URL = `${API_BASE_URL}/api/library-items?populate=*&pagination[limit]=100`;
 const EPISODES_API_URL = `${API_BASE_URL}/api/episodes?fields=order,Title,thumb`;
 
-const EPISODES_PER_PAGE = 2; // ✅ Show 2 episodes per page
+const EPISODES_PER_PAGE = 4; // ✅ Show 2 episodes per page
 
 export async function getStaticProps() {
   try {
