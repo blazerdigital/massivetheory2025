@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 
   if (!data.data || !Array.isArray(data.data)) {
     console.error("❌ API response is invalid");
-    return { paths: [], fallback: "blocking" };
+    return { paths: [], fallback: false }; // 🔥 CHANGE fallback to "false"
   }
 
   const paths = data.data
@@ -25,7 +25,7 @@ export async function getStaticPaths() {
 
   console.log("✅ Extracted Paths:", paths);
 
-  return { paths, fallback: "blocking" };
+  return { paths, fallback: false }; // 🔥 CHANGE fallback to "false"
 }
 
 // 🔹 Fetch book details & related books at build time
