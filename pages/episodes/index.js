@@ -7,7 +7,7 @@ import Link from "next/link";
 import styles from './EpisodesPage.module.css'; // Ensure this file exists
 import { fetchAPI } from "../../lib/api";
 
-const API_URL = process.env.STRAPI_API_URL || "http://10.0.1.48:1337";
+const API_URL = process.env.STRAPI_API_URL || "http://10.0.1.48:1337:";
 
 const EpisodesPage = ({ episodes }) => {
   return (
@@ -42,12 +42,12 @@ const EpisodesPage = ({ episodes }) => {
   );
 };
 export async function getStaticProps() {
-  const API_URL = "http://localhost:1337";
+  const API_URL = process.env.STRAPI_API_URL || "http://localhost:1337";
 
-  const response = await fetch(`${API_URL}/api/episodes?fields=Title,slug,thumb&sort[Order]=desc`);
+  const response = await fetch(`${API_URL}/api/episodes?fields[0]=Title&fields[1]=slug&fields[2]=thumb&sort=order:desc`);
   const data = await response.json();
 
-  console.log("API Response:", JSON.stringify(data, null, 2)); // Log the response to debug
+  console.log("API Response:", JSON.stringify(data, null, 2)); // Log response for debugging
 
   return {
     props: { episodes: data.data || [] },

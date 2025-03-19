@@ -51,11 +51,11 @@ const HomePage = ({ latestEpisodes = [] }) => {
 };
 
 export async function getStaticProps() {
-  const API_URL = "http://localhost:1337";
+  const API_URL = "http://10.0.1.48:1337"; // UPDATE THIS
 
   try {
     const response = await fetch(
-      `${API_URL}/api/episodes?fields=Title,slug,thumb&sort[Order]=desc&pagination[limit]=3`
+      `http://10.0.1.48:1337/api/episodes?fields=Title,slug,thumb&sort[order]=desc&pagination[limit]=3`
     );
 
     if (!response.ok) {
@@ -63,6 +63,8 @@ export async function getStaticProps() {
     }
 
     const data = await response.json();
+
+    console.log("API Response:", JSON.stringify(data, null, 2)); // Debugging line
 
     const latestEpisodes = data.data || []; // Use fallback if no data is returned
 
@@ -76,5 +78,6 @@ export async function getStaticProps() {
     };
   }
 }
+
 
 export default HomePage;

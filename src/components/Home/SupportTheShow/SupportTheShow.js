@@ -5,19 +5,16 @@ import classes from "./SupportTheShow.module.css";
 import { Heading, Text, Wrapper } from "@/components/common";
 import VideoBg from "../../common/VideoBg/VideoBg"
 import clsx from "clsx";
-import MailerLiteForm from "../MailerLiteForm/MailerLiteForm";
+import SubscribeForm from "../SubscribeForm/SubscribeForm";
 
 const SupportTheShow = () => {
   const helpsList = [
-    "Creating New Content",
-    "Custom Art",
-    "Animation and VFX",
-    "Original Music and Licenses",
-    "Website Security",
-    "Exploring New Technology",
-    "Making Us Platform Independent",
-    "Covering Operational Expenses",
-    "Expanding Our Operations",
+      "New Episodes – Uncovering untold stories.",
+      "Custom Art & Animation – Bringing ideas to life.",
+      "Original Music – Enhancing the experience.",
+      "Website & Security – Keeping everything running smoothly.",
+      "New Technology – Exploring cutting-edge tools.",
+      "Operational Growth – Expanding while staying independent.",
   ];
 
   return (
@@ -31,32 +28,26 @@ const SupportTheShow = () => {
       <div className={clsx(classes.subscriberContainer, "container")}>
         <div className={classes.infoContainer}>
           <Heading xl4 highlight className={classes.title}>
-            Subscribe to Our Newsletter
+          Stay Tuned to the Signal
           </Heading>
           <Text base0 xl>
-            In addition to follow up on Youtube, Rumble and Odysee, to show your support for us as content creators and help spread our message, subscribing to our newsletter is the best action you can take right now.
-          </Text>
-          <Text base0 xl>
-            By subscribing, you'll be helping us achieve our goal of becoming platform-independent, allowing us to stay connected as the digital landscape continues to evolve.
-          </Text>
-          <Text base0 xl>
-            Rest assured that your information will never be shared with third-parties, so you'll only receive updates when a new episode drops. Join our audience today and be a part of our journey!
+          Stay ahead with the latest episodes and exclusive updates. No fluff, no spam—just the signal.
           </Text>
         </div>
         <div className={classes.subscribeForm}>
-          <MailerLiteForm />
+        <SubscribeForm />
         </div>
       </div>
       <div className={clsx(classes.donationInfoContainer, "container")}>
         <div className={classes.infoContainer}>
           <Heading xl4 highlight className={classes.title}>
-            Make A Donation
+          Support the Show
           </Heading>
           <Text base0 xl>
-          Donating is quick, secure, and effortless. Using the Donorbox app, your donation is processed securely, ensuring your transaction is safe and protected. 
+          Your generosity fuels our creativity. Every contribution helps us expand, innovate, and remain independent.
           </Text>
           <Text base0 xl>
-          We greatly appreciate your generosity. Your support enables us to produce more content, expand our show, and enhance our impact. Your donation will be used for:
+          Your donation supports:
           </Text>
           <ul className={classes.helpsLists}>
             {helpsList.map((list, i) => (
@@ -68,7 +59,7 @@ const SupportTheShow = () => {
             ))}
           </ul>
           <Text base0 xl>
-          If you would like to be included in the credits of our next episode, please leave your name in the comment section when you make your donation. Your donation truly makes a difference.
+          If you'd like to be credited in our next episode, leave your name in the comment section when donating. Every contribution makes a difference. Thank you for being part of this journey.
           </Text>
         </div>
         <div className={classes.donationBox}>

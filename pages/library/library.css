@@ -1,0 +1,324 @@
+/* General layout */
+.library-container {
+  max-width: 1199px;
+  margin: 120px auto 40px auto;
+  padding: 20px;
+}
+
+/* Title styling */
+.library-title {
+  color: #ffd700;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Books grid (matches episode page layout) */
+.booksGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px 25px;
+}
+
+/* Individual book card */
+.bookCard {
+  transition: transform 0.2s ease-in-out;
+  border: none; /* Remove the white border */
+  background: transparent; /* Ensure no white background */
+  box-shadow: none; /* Remove unnecessary shadow */
+}
+
+
+.bookCard:hover {
+  transform: translateY(-5px);
+}
+
+/* Book images */
+.book-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+/* Book title */
+.episodeTitle {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: "Work Sans", sans-serif;
+  color: #ffd700;
+  border-radius: 25px;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Description */
+.book-description {
+  font-size: 0.8em;
+  color: #ddd6c6;
+  text-align: left;
+  line-height: 1.6;
+}
+
+/* Buy link */
+.buy-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.buy-link:hover {
+  text-decoration: underline;
+}
+.book-left {
+  display: flex;
+  flex-direction: column; /* ✅ Forces stacking (cover on top, button below) */
+  align-items: center; /* ✅ Centers both elements */
+  gap: 10px; /* ✅ Adds spacing between cover and button */
+}
+
+/* Responsive design */
+@media only screen and (max-width: 991px) {
+  .booksGrid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 16px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .booksGrid {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 450px;
+      margin: 0 auto;
+  }
+}
+/* ✅ Page Wrapper (Matches Other Pages) */
+.book-container {
+  max-width:1199px; /* Keeps layout consistent */
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+/* ✅ Return to Catalog Link */
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #ffd700;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Book Content Layout (Flexbox for Side-by-Side) */
+.book-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* ✅ Book Thumbnail (Smaller, on Left) */
+.book-image {
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ✅ Book Details (Larger Area on Right) */
+.book-details {
+  flex: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Book Title */
+.book-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 10px;
+  font-family: 'AmsiPro-Ultra', sans-serif;
+}
+
+/* ✅ Book Author */
+.book-author {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 15px;
+  font-family: "Work Sans", sans-serif;
+}
+.book-meta{
+  font-size: 1em;
+  color: #ccc;
+  margin-bottom: 15px;
+  line-height: 1.3em;
+  font-family: "Work Sans", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.author-bio p{
+  font-size: 1em;
+  color: #ccc;
+  text-align: left;
+  line-height: 1.6;
+  font-family: "Work Sans", sans-serif;
+}
+.author-bio h3 {
+  font-size: 1em;
+  color: #fff; /* Text color */
+  background-color: #5946b2;
+  padding: 10px 15px; /* Padding inside the box */
+  border-radius: 8px; /* Rounded corners */
+  display: inline-block; /* Makes it fit the text */
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3em;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+/* ✅ Book Description */
+.book-description {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ✅ Amazon Button (Centered Under Book Info) */
+.amazon-button {
+  width: 180px;
+  height: auto;
+  margin-top: 20px;
+}
+.back-link {
+  display: block;
+  text-align: right; /* ✅ Moves link to the right */
+  font-size: 1em;
+  color: #ffd700;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-family: "Work Sans", sans-serif;
+}
+/* ✅ Related Books Section (Now Full-Width Below Content) */
+.related-books {
+  width: 100%; /* ✅ Takes full width of the page */
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #5946b2;;
+  text-align: center;
+}
+
+.related-books h3 {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* ✅ Grid Layout for Related Books */
+.related-books-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* ✅ Always 5 columns */
+  gap: 10px;
+  justify-content: center;
+  max-width: 1199px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+/* ✅ Individual Related Book Card */
+.related-book-card {
+  background-color: rgba(10, 10,10, 0.2);
+  padding: 5px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.related-book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Related Book Image */
+.related-book-image {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+/* ✅ Related Book Title */
+.related-book-title {
+  font-size: 0.9em;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+/* ✅ Responsive: Adjust Grid for Smaller Screens */
+@media only screen and (max-width: 768px) {
+  .related-books-grid {
+      grid-template-columns: repeat(2, 1fr); /* ✅ 2 per row on smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .related-books-grid {
+      grid-template-columns: repeat(1, 1fr); /* ✅ 1 per row on very small screens */
+  }
+}
+/* ✅ Make book details stack vertically on smaller screens */
+@media only screen and (max-width: 768px) {
+  .book-content {
+    flex-direction: column; /* ✅ Forces the cover + details to stack */
+    align-items: center; /* ✅ Centers everything */
+    text-align: center;
+  }
+
+  .book-left {
+    width: 100%; /* ✅ Ensures it takes the full width on mobile */
+    display: flex;
+    flex-direction: column; /* ✅ Stack cover + button properly */
+    align-items: center;
+  }
+
+  .book-image {
+    width: 80%; /* ✅ Scales down the book cover without overflowing */
+    max-width: 280px; /* ✅ Prevents it from getting too large */
+  }
+
+  .amazon-button {
+    width: 160px; /* ✅ Ensures it's not oversized on mobile */
+    margin-top: 15px; /* ✅ Adds spacing from the book cover */
+  }
+
+  .book-details {
+    width: 100%;
+    padding: 0 15px; /* ✅ Adds some breathing room on small screens */
+    text-align: center; /* ✅ Centers text */
+  }
+}
+
+/* ✅ Ensure related books grid adapts to smaller screens */
+@media only screen and (max-width: 991px) {
+  .related-books-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns for medium screens */
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .related-books-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 1 column on very small screens */
+  }
+}

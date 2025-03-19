@@ -26,8 +26,7 @@ const HeroSection = () => {
 
         <div className={classes.infoContainer}>
           <Heading className={classes.heading}>
-            <Highlight> Animated stories</Highlight> about the past, present and
-            future of <Highlight>humanity</Highlight>.
+            Where <Highlight>myth</Highlight>, <Highlight>history</Highlight>, and <Highlight>the future</Highlight> converge into one <Highlight>story</Highlight>.
           </Heading>
           <Text xl2 light highlight>
             Watch the Series on

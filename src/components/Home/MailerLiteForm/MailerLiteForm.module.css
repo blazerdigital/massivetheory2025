@@ -1,9 +1,0 @@
-/* Container for the entire form */
-.mlFormContainer {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color:#2a2c3d;
-  border-radius: 25px;
-}

@@ -11,8 +11,8 @@ const Navbar = () => {
   const navItems = [
     { navItem: "HOME", to: "/" },
     { navItem: "EPISODES", to: "/episodes" },
+    { navItem: "LIBRARY", to: "/library" },
     { navItem: "SUPPORT", to: "/support" },
-    { navItem: "CONTACT", to: "/contact" },
   ];
 
   const socialLinks = [
