@@ -25,7 +25,7 @@ const SubscribeForm = () => {
 
     try {
       const response = await fetch(
-        "https://w73f1is6sc.execute-api.us-east-1.amazonaws.com/subscribeUser",
+        "https://w73f1is6sc.execute-api.us-east-1.amazonaws.com/prod/subscribeUser",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
