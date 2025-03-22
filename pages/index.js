@@ -24,7 +24,7 @@ const HomePage = ({ latestEpisodes = [] }) => {
         {/* Integrate LastThreePage rendering logic */}
         <div className={styles.container}>
           <div className={styles.EpisodesWrapper}>
-            <Heading className={styles.heading}>Latest Episodes</Heading>
+            <Heading className={styles.heading}></Heading>
             <div className={styles.episodesGrid}>
               {latestEpisodes.map((episode) => (
                 <div key={episode.id} className={styles.episodeCard}>
@@ -51,11 +51,11 @@ const HomePage = ({ latestEpisodes = [] }) => {
 };
 
 export async function getStaticProps() {
-  const API_URL = "http://10.0.1.48:1337"; // UPDATE THIS
+  const API_URL = "http://localhost:1337"; // UPDATE THIS
 
   try {
     const response = await fetch(
-      `http://10.0.1.48:1337/api/episodes?fields=Title,slug,thumb&sort[order]=desc&pagination[limit]=3`
+      `http://locahost:1337/api/episodes?fields=Title,slug,thumb&sort[order]=desc&pagination[limit]=3`
     );
 
     if (!response.ok) {

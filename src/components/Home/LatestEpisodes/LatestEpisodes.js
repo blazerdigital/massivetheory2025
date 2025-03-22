@@ -14,7 +14,6 @@ const LatestEpisodes = ({ episodes }) => {
       <div id="anchor-episodes" className="anchor"></div>
       <div className={clsx("container", classes.container)}>
         <Heading xl5 highlight className={classes.heading}>
-          Latest Episodes
         </Heading>
 
         <div className={classes.episodes}>
